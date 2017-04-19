@@ -13,6 +13,12 @@ var str = "Hello, playground"
 //Tash Table : Array of Lists
 //primitive data types
 //guard statement
+//Stack Views
+//Intrinsic Content Size
+//Compression Resistance
+//Content Hugging
+//Check size classes
+//Gestures
 
 
 //first value is always included
@@ -66,26 +72,26 @@ class ourClass{
 }
 
 func test(){
-var OurClassobject = ourClass()
+let OurClassobject = ourClass()
 
 //optional is an enumeration; enum is nil or type ! is wrape
 OurClassobject.s ?? 10 //default value if not found
 
-if let theValue = OurClassobject.s{
+if OurClassobject.s != nil{
     print("value is found")
 }
 
 //guard statement
-guard let otherVal = OurClassobject.s else {
+guard OurClassobject.s != nil else {
     print("value is not found")
     return
 }
 }
+
 test()
 
-//implement a sorting algorithm with swift and implement it
-//array of int
-//array of strings
+
+
 
 
 
