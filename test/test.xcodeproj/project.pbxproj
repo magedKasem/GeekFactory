@@ -99,7 +99,7 @@
 				TargetAttributes = {
 					26E67F571EA7E6BC00DB8D26 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 6N79N5TMUW;
+						DevelopmentTeam = T47Z6622D8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -267,7 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6N79N5TMUW;
+				DEVELOPMENT_TEAM = T47Z6622D8;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Buying.test;
@@ -280,7 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 6N79N5TMUW;
+				DEVELOPMENT_TEAM = T47Z6622D8;
 				INFOPLIST_FILE = test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Buying.test;
