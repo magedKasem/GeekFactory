@@ -17,12 +17,11 @@ class ChecklistTableViewController: UITableViewController, AddItemViewController
     required init?(coder aDecoder: NSCoder) {
         items = [ChecklistItem]()
         super.init(coder: aDecoder)
-        saveCheckListItems()
+        loadChecklistItems()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -50,17 +49,18 @@ class ChecklistTableViewController: UITableViewController, AddItemViewController
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChecklistItem", for: indexPath) as! ItemTableViewCell
         // Configure the cell...
         let item = items[indexPath.row]
         configureText(for: cell, with: item)
         configureCheckmark(for: cell, with: item)
         
+        
         return cell
     }
-    func configureText(for cell : UITableViewCell, with item : ChecklistItem){
-        let label = cell.viewWithTag(1) as! UILabel
+    func configureText(for cell : ItemTableViewCell, with item : ChecklistItem){
+        
+        let label = cell.label!
         label.text = item.text
     }
     
@@ -152,8 +152,10 @@ class ChecklistTableViewController: UITableViewController, AddItemViewController
         let path = dataFilePath()
         if let data = try? Data(contentsOf: path) {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
+            
             items = unarchiver.decodeObject(forKey: "ChecklistItems") as! [ChecklistItem]
             unarchiver.finishDecoding()
+            
         }
     }
     

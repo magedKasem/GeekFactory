@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2pC-Aw-Gm6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2pC-Aw-Gm6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,27 +18,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="72" id="uRl-YQ-QSV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="ChecklistItem" rowHeight="72" id="uRl-YQ-QSV" customClass="ItemTableViewCell" customModule="Checklists" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="72"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uRl-YQ-QSV" id="A8s-KX-ao4">
-                                    <rect key="frame" x="0.0" y="0.0" width="336" height="71"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="336" height="71.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-Az-byP">
-                                            <rect key="frame" x="8" y="0.0" width="320" height="63"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SIu-bG-xxA">
+                                            <rect key="frame" x="20" y="0.0" width="296" height="71.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2M-Az-byP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="226" height="71.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="251" image="Pooh" translatesAutoresizingMaskIntoConstraints="NO" id="ZYm-yt-LcP">
+                                                    <rect key="frame" x="226" y="0.0" width="70" height="71.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="Qdh-uo-GD3"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ZYm-yt-LcP" firstAttribute="leading" secondItem="T2M-Az-byP" secondAttribute="trailing" id="2yR-n8-lDa"/>
+                                                <constraint firstItem="T2M-Az-byP" firstAttribute="centerY" secondItem="SIu-bG-xxA" secondAttribute="centerY" id="XdL-Pa-cr8"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZYm-yt-LcP" secondAttribute="trailing" id="ha8-EC-cDG"/>
+                                                <constraint firstItem="ZYm-yt-LcP" firstAttribute="centerY" secondItem="SIu-bG-xxA" secondAttribute="centerY" id="kUb-MA-flv"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="T2M-Az-byP" firstAttribute="leading" secondItem="A8s-KX-ao4" secondAttribute="leading" constant="8" id="D6X-kv-olZ"/>
-                                        <constraint firstAttribute="trailing" secondItem="T2M-Az-byP" secondAttribute="trailing" constant="8" id="cnb-Ua-0u6"/>
-                                        <constraint firstItem="T2M-Az-byP" firstAttribute="top" secondItem="A8s-KX-ao4" secondAttribute="top" id="jh6-fh-Nva"/>
-                                        <constraint firstItem="T2M-Az-byP" firstAttribute="bottom" secondItem="A8s-KX-ao4" secondAttribute="bottomMargin" id="xH8-J9-oze"/>
+                                        <constraint firstAttribute="trailing" secondItem="SIu-bG-xxA" secondAttribute="trailing" constant="20" symbolic="YES" id="1co-4C-Lkw"/>
+                                        <constraint firstItem="SIu-bG-xxA" firstAttribute="top" secondItem="A8s-KX-ao4" secondAttribute="top" id="Abd-AZ-Rne"/>
+                                        <constraint firstItem="SIu-bG-xxA" firstAttribute="centerY" secondItem="A8s-KX-ao4" secondAttribute="centerY" id="cbr-nS-mZw"/>
+                                        <constraint firstAttribute="bottom" secondItem="SIu-bG-xxA" secondAttribute="bottom" id="idb-mk-0kL"/>
+                                        <constraint firstItem="SIu-bG-xxA" firstAttribute="leading" secondItem="A8s-KX-ao4" secondAttribute="leading" constant="20" symbolic="YES" id="lZd-yr-kbr"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="label" destination="T2M-Az-byP" id="FRY-xx-fle"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,7 +79,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKh-ti-q1j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="82"/>
+            <point key="canvasLocation" x="700" y="81.409295352323838"/>
         </scene>
         <!--Add Item-->
         <scene sceneID="07L-ro-r3z">
@@ -76,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="35" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YPR-7r-iVD" id="ZF3-Hq-H2d">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="To Do list Item" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOE-99-w8x">
@@ -164,4 +184,7 @@
             <point key="canvasLocation" x="1434" y="81"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Pooh" width="285" height="400"/>
+    </resources>
 </document>
