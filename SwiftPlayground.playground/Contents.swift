@@ -23,13 +23,13 @@ var str = "Hello, playground"
 
 //first value is always included
 for i in 0...10 {
-    print("Hello GeekFactory \(i)")
+    //print("Hello GeekFactory \(i)")
     i*i
 }
 
 //exclude 10
 for i in 0..<10 {
-    print("Hello GeekFactory \(i)")
+    //print("Hello GeekFactory \(i)")
     i*i
 }
 
@@ -43,18 +43,18 @@ Error.errorNumber
 Error.errorString
 
 let (code,textValue) = httpError
-print(code)
+//print(code)
 
 //arrays
 var thisIsAnArray = [0...10]
-print(thisIsAnArray)
+//print(thisIsAnArray)
 
 //dict
 var dict = ["key1": 1 , "key2": 2]
 dict["key1"]
 
-print(Int.min)
-print(Int.max)
+//print(Int.min)
+//print(Int.max)
 
 func printAndCount(string: String) ->Int{
     return string.characters.count
@@ -88,11 +88,21 @@ guard OurClassobject.s != nil else {
 }
 }
 
-test()
+//test()
 
 
+func somemethod (_ codeBlock: () -> Void){
+    codeBlock()
+}
 
 
+func somemethod2 (_ codeBlock: (Int) -> Bool){
+    
+}
+
+somemethod {
+    print("some method")
+}
 
 
 
