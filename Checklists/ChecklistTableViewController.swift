@@ -62,6 +62,7 @@ class ChecklistTableViewController: UITableViewController, AddItemViewController
         
         let label = cell.label!
         label.text = item.text
+        cell.itemImage.image = UIImage(named: "Pooh")
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item : ChecklistItem) {
