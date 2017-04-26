@@ -2,7 +2,7 @@
 //  ItemTableViewCell.swift
 //  Checklists
 //
-//  Created by Maged Kasem on 4/19/17.
+//  Created by Maged Kasem on 4/23/17.
 //  Copyright © 2017 Maged Kasem. All rights reserved.
 //
 
@@ -10,12 +10,9 @@ import UIKit
 
 class ItemTableViewCell: UITableViewCell {
 
-    
-    @IBOutlet weak var label: UILabel!
-    
-    @IBOutlet weak var itemImage: UIImageView!
-   
-    
+    //Outlets
+    @IBOutlet weak var itemText: UILabel!
+    @IBOutlet weak var check: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

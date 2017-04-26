@@ -2,31 +2,34 @@
 //  ChecklistItem.swift
 //  Checklists
 //
-//  Created by Maged Kasem on 3/6/17.
+//  Created by Maged Kasem on 4/23/17.
 //  Copyright © 2017 Maged Kasem. All rights reserved.
 //
 
 import Foundation
-class ChecklistItem: NSObject, NSCoding {
-    var text = ""
+class ChecklistItem : NSObject, NSCoding {
+    var itemText = ""
     var checked = false
     
-    func toggleChecked(){
-        checked = !checked
-    }
-    
-    func encode(with aCoder: NSCoder) {
-        aCoder.encode(text, forKey: "Text")
-        aCoder.encode(checked, forKey: "Checked")
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        text = aDecoder.decodeObject(forKey: "Text") as! String
+    required init?(coder aDecoder : NSCoder) {
+        itemText = aDecoder.decodeObject(forKey: "Text") as! String
         checked = aDecoder.decodeBool(forKey: "Checked")
         super.init()
+
     }
     
     override init() {
         super.init()
+    }
+    
+    
+
+    func encode (with aCoder : NSCoder){
+        aCoder.encode(itemText, forKey: "Text")
+        aCoder.encode(checked, forKey: "Checked")
+    }
+    
+    func toggleChecked() {
+        checked = !checked
     }
 }
