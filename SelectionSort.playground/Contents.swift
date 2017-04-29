@@ -30,3 +30,9 @@ func selection<type : Comparable>(list : [type]) -> [type]{
 
 selection(list: [2,1,3])
 selection(list: ["b","d","a","c"])
+
+
+
+
+
+
