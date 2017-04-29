@@ -14,7 +14,7 @@ protocol ListDetailViewControllerDelegate: class {
     func listDetailViewController(_ controller: ListDetailTableViewController,didFinishEditing checklist: Checklist)
 }
 
-class ListDetailTableViewController: UITableViewController, UITextFieldDelegate {
+class ListDetailTableViewController: UITableViewController, UITextFieldDelegate,IconPickerViewControllerDelegate {
     
     weak var delegate : ListDetailViewControllerDelegate?
     
@@ -23,6 +23,8 @@ class ListDetailTableViewController: UITableViewController, UITextFieldDelegate 
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var doneButton: UIBarButtonItem!
     
+    @IBOutlet weak var icon: UIImageView!
+    var iconName = "Folder"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,16 +33,20 @@ class ListDetailTableViewController: UITableViewController, UITextFieldDelegate 
             title = "Edit Checklist"
             textField.text = checklist.name
             doneButton.isEnabled = true
+            iconName = checklist.iconName
         }
+        icon.image = UIImage(named: iconName)
     }
         
     @IBAction func done(_ sender: Any) {
         if let checklist = checklistToEdit {
             checklist.name = textField.text!
+            checklist.iconName = iconName
             delegate?.listDetailViewController(self,
                                                didFinishEditing: checklist)
         } else {
             let checklist = Checklist(name: textField.text!)
+            checklist.iconName = iconName
             delegate?.listDetailViewController(self,didFinishAdding: checklist)
         }
     }
@@ -51,7 +57,11 @@ class ListDetailTableViewController: UITableViewController, UITextFieldDelegate 
     
     
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        return nil
+        if indexPath.section == 1 {
+            return indexPath
+        } else {
+            return nil
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,6 +80,14 @@ class ListDetailTableViewController: UITableViewController, UITextFieldDelegate 
         return true
     }
     
+    //icon picker delegate
+    func iconPicker(_ picker: IconPickerViewController, didPick iconName: String) {
+        self.iconName = iconName
+        icon.image = UIImage(named: iconName)
+        let _ = navigationController?.popViewController(animated: true)
+    }
+    
+   
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)

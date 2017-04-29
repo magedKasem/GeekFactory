@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2600C9A31EB4403B00F3BDC0 /* IconPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2600C9A21EB4403B00F3BDC0 /* IconPickerViewController.swift */; };
 		2656FB901EACC942001B6FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2656FB8F1EACC942001B6FAD /* AppDelegate.swift */; };
 		2656FB951EACC942001B6FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2656FB931EACC942001B6FAD /* Main.storyboard */; };
 		2656FB9A1EACC942001B6FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2656FB991EACC942001B6FAD /* Assets.xcassets */; };
@@ -19,10 +20,10 @@
 		26F0EC691EAD170F00D7C7EB /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F0EC681EAD170F00D7C7EB /* ChecklistItem.swift */; };
 		26F871651EB3F8120060840F /* AllListsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F871641EB3F8120060840F /* AllListsTableViewController.swift */; };
 		26F871671EB3F8950060840F /* ListDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F871661EB3F8950060840F /* ListDetailTableViewController.swift */; };
-		26F8716A1EB3FB950060840F /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F871691EB3FB950060840F /* ListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2600C9A21EB4403B00F3BDC0 /* IconPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IconPickerViewController.swift; sourceTree = "<group>"; };
 		2656FB8C1EACC942001B6FAD /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2656FB8F1EACC942001B6FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2656FB941EACC942001B6FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,7 +38,6 @@
 		26F0EC681EAD170F00D7C7EB /* ChecklistItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		26F871641EB3F8120060840F /* AllListsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllListsTableViewController.swift; sourceTree = "<group>"; };
 		26F871661EB3F8950060840F /* ListDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListDetailTableViewController.swift; sourceTree = "<group>"; };
-		26F871691EB3FB950060840F /* ListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,11 +73,11 @@
 				2656FB8F1EACC942001B6FAD /* AppDelegate.swift */,
 				2656FB931EACC942001B6FAD /* Main.storyboard */,
 				26F871641EB3F8120060840F /* AllListsTableViewController.swift */,
-				26F871691EB3FB950060840F /* ListTableViewCell.swift */,
 				26F871661EB3F8950060840F /* ListDetailTableViewController.swift */,
 				2656FBA41EAD0F65001B6FAD /* ChecklistTableViewController.swift */,
 				2656FBA81EAD0FB7001B6FAD /* ItemTableViewCell.swift */,
 				2656FBA61EAD0F76001B6FAD /* AddItemTableViewController.swift */,
+				2600C9A21EB4403B00F3BDC0 /* IconPickerViewController.swift */,
 				26F871681EB3F8B50060840F /* Model */,
 				2656FB991EACC942001B6FAD /* Assets.xcassets */,
 				2656FB9B1EACC942001B6FAD /* LaunchScreen.storyboard */,
@@ -172,11 +172,11 @@
 				2659D9311EB4073300176E16 /* Checklist.swift in Sources */,
 				2656FBA71EAD0F76001B6FAD /* AddItemTableViewController.swift in Sources */,
 				267922341EB427BA00F374DE /* DataModel.swift in Sources */,
+				2600C9A31EB4403B00F3BDC0 /* IconPickerViewController.swift in Sources */,
 				26F0EC691EAD170F00D7C7EB /* ChecklistItem.swift in Sources */,
 				2656FBA51EAD0F65001B6FAD /* ChecklistTableViewController.swift in Sources */,
 				2656FBA91EAD0FB7001B6FAD /* ItemTableViewCell.swift in Sources */,
 				26F871671EB3F8950060840F /* ListDetailTableViewController.swift in Sources */,
-				26F8716A1EB3FB950060840F /* ListTableViewCell.swift in Sources */,
 				2656FB901EACC942001B6FAD /* AppDelegate.swift in Sources */,
 				26F871651EB3F8120060840F /* AllListsTableViewController.swift in Sources */,
 			);

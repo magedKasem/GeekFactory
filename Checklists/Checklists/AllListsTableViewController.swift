@@ -61,20 +61,22 @@ class AllListsTableViewController: UITableViewController, ListDetailViewControll
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Checklist", for: indexPath) as! ListTableViewCell
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Checklist", for: indexPath)         
         // Configure the cell...
-        cell.checklistName.text = dataModel.lists[indexPath.row].name
+        cell.textLabel!.text = dataModel.lists[indexPath.row].name
+        cell.accessoryType = .detailDisclosureButton
+
         let checklist = dataModel.lists[indexPath.row]
         if checklist.items.count == 0{
-            cell.count.text = "No Items"
+            cell.detailTextLabel!.text = "No Items"
         }
         else if checklist.countItems() == 0{
-            cell.count.text = "All Done"
+            cell.detailTextLabel!.text = "All Done"
         }
         else{
-            cell.count.text = "\(checklist.countItems()) Remaining"
+            cell.detailTextLabel!.text = "\(checklist.countItems()) Remaining"
         }
+        cell.imageView!.image = UIImage(named: checklist.iconName)
         return cell
     }
     
