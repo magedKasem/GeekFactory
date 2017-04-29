@@ -9,6 +9,7 @@
 import Foundation
 
 import UIKit
+
 protocol IconPickerViewControllerDelegate: class {
     func iconPicker(_ picker: IconPickerViewController,didPick iconName: String)
 }
@@ -45,6 +46,7 @@ class IconPickerViewController: UITableViewController {
                             didSelectRowAt indexPath: IndexPath) {
         if let delegate = delegate {
             delegate.iconPicker(self, didPick: icons[indexPath.row])
+            
         }
     }
     

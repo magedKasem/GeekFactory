@@ -315,7 +315,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="uVg-kg-kid" kind="show" id="vjD-bf-C0f"/>
+                                            <segue destination="uVg-kg-kid" kind="show" identifier="PickSegue" id="vjD-bf-C0f"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

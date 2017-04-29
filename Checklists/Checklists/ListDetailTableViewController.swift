@@ -86,6 +86,13 @@ class ListDetailTableViewController: UITableViewController, UITextFieldDelegate,
         icon.image = UIImage(named: iconName)
         let _ = navigationController?.popViewController(animated: true)
     }
+    //segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PickSegue" {
+            let controller = segue.destination as! IconPickerViewController
+            controller.delegate = self
+        }
+    }
     
    
     /*
